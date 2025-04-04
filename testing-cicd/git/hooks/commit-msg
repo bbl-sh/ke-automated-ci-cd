@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Read the commit message from the file Git provides
+commit_msg=$(cat "$1")
+
+# Check if the message contains "testmycode" (or your keyword)
+if echo "$commit_msg" | grep -q "testmycode"; then
+    echo "Commit message contains 'testmycode'. Running script..."
+    pwd
+    #chmod +x script.sh
+    testing/script.sh
+    if [ $? -ne 0 ]; then
+        echo "Script failed. Aborting commit."
+        exit 1  # Abort the commit
+    fi
+fi
+
+# Allow the commit to proceed
+exit 0

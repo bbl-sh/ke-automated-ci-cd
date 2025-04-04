@@ -1,0 +1,9 @@
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Pycache
+.__pycache__
+**/__pycache__/
