@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=(../package.json ../.gitignore ../.prettierrc ../.prettierignore ../.env)
+files=(testing-cicd/package.json testing-cicd/.gitignore testing-cicd/.prettierrc testing-cicd/.prettierignore testing-cicd/.env)
 
 curl_files=()
 
@@ -17,7 +17,7 @@ if [ ${#curl_files[@]} -eq 0 ]; then
     exit 1
 fi
 
-echo "Uploading: ${curl_files[*]}"
+#echo "Uploading: ${curl_files[*]}"
 
 
 curl -X POST "http://localhost:8000/upload" "${curl_files[@]}"
