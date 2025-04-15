@@ -3,6 +3,11 @@
 This project implements an agentic CI/CD pipeline that automates workflows using Git commit hooks. When a commit is made with the name `testmycode`, a bash script with `curl` sends the required files to a backend server. The backend, built with FastAPI and LangGraph, processes these files by organizing tasks into a graph of nodes for CI/CD operations.
 The frontend is svelte basic ui template with env, prettier, eslint etc
 
+# Here is video links explaining about the project
+
+[Agentic CI/CD Explaination](https://youtu.be/AF9T1-oKQ40)
+[Agentic CI/CD 2](https://youtu.be/uWdmD66XEY8)
+
 ---
 
 ## Features
